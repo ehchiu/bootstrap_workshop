@@ -2,42 +2,51 @@
 <html>
 <head>
   <title>CS Survival Guide</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-  <nav>
-    <div>
-      <div>
-        <a href="#">CS Survival Guide</a>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CS Survival Guide</a>
+        <button type="button" data-target="#collapsingmenu" class="navbar-toggle" data-toggle="collapse">
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
       </div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Favorite Classes</a></li>
-        <li><a href="#">Top Languages</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="collapsingmenu">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#commonMistakes">Common Mistakes</a></li>
+          <li><a href="#tips">Bonus Tips</a></li>
+          <li><a href="#learn">What You will Learn</a></li>
+          <li><a href="#quotes">Quotes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbspSign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbspLogin</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-
-  <div class="page_header">
-    <div>
-      <h1>Dartmouth CS Survival Guide</h1>
-      <p>Welcome to the homepage of the Dartmouth CS Survival Guide – your home
-        for helpful tips, tricks, and stories to help you get through your time
-        as a CS major.</p>
-      </div>
-    </div>
-
-    <div class="grid_layout">
-      <h2>Top 6 Common CS Mistakes to Avoid</h2>
+  <div class="container">
+    <div class="jumbotron">
       <div>
-        <div>
-          <h3>#1: Segmentation Faults (Core Dumped)</h3>
+        <h1 class="display-1">Dartmouth CS Survival Guide</h1>
+        <p>Welcome to the homepage of the Dartmouth CS Survival Guide – your home
+          for helpful tips, tricks, and stories to help you get through your time
+          as a CS major.</p>
         </div>
-        <div>
+      </div>
+  </div>
+    <div class="container-fluid" id="commonMistakes">
+      <h2 class="display-2">Top 6 Common CS Mistakes to Avoid</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="display-3">#1: Segmentation Faults (Core Dumped)</h3>
           <p>
             As anyone who has programmed in C knows, working with a language
             that is not memory safe can be a blessing and a curse.  One
@@ -47,12 +56,8 @@
             'Taking a segfault to the face'.
           </p>
         </div>
-      </div>
-      <div>
-        <div>
+        <div class="col-md-6">
           <h3>#2: Procrastination</h3>
-        </div>
-        <div>
           <p>
             The only possible thing that makes a CS lab harder is when its
             due at midnight and it’s 10pm.  Being a CS major and procrastinating
@@ -62,11 +67,9 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="row">
+        <div class="col-md-6">
           <h3>#3: Not Using Git</h3>
-        </div>
-        <div>
           <p>
             As a student, especially if no one else is working on your code,
             using Git can seem tedious and unneccessary.  Why learn this complicated
@@ -76,12 +79,8 @@
             save invaluable time and is a necessary skill for group work.
           </p>
         </div>
-      </div>
-      <div>
-        <div>
+        <div class="col-md-6">
           <h3>#4: Getting Cooked</h3>
-        </div>
-        <div>
           <p>
             Ever tried taking two systems level programming courses in the same
             term?  Or how about saving an entire CS50 lab until the last minute?
@@ -93,11 +92,9 @@
           </p>
         </div>
       </div>
-      <div>
-        <div>
+      <div class="row">
+        <div class="col-md-6">
           <h3>#5: Forgetting How to Code</h3>
-        </div>
-        <div>
           <p>
             What's that you say?  How could a programmer possibly forget how to
             code?  Well you're right, they probably couldn't.  The problem is
@@ -105,16 +102,115 @@
             ran out of ideas.
           </p>
         </div>
+        <div class="col-md-6">
+        </div>
       </div>
     </div>
 
-    <footer>
-      <ul>
-        <li><a href="#">ORC</a></li>
-        <li><a href="#">Schedule</a></li>
-        <li><a href="#">Major</a></li>
-        <li><a href="#">Professors</a></li>
-      </ul>
-    </footer>
+    <div class="container-fluid" id="tips">
+      <h2>Bonus Tips!</h2>
+      <div class="row">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#bonusTip">Bonus Tip #1</button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#bonusTip2">Bonus Tip #2</button>
+          </div>
+      </div>
+    </div>
+
+<div class="container-fluid" id="learn">
+  <h2>What You will Learn <small class="text-muted">As taken from the Dartmouth CS Website</small></h2>
+  <p class="lead">
+    AS A COMPUTER SCIENCE MAJOR AT DARTMOUTH<br />
+
+You will recognize that computational techniques apply to diverse problems, and you will be able to determine which techniques to apply in a given situation.
+
+You will know how to develop computational models, abstractions, and representations of information.
+
+You will be able to design and implement efficient and elegant solutions to computational problems.
+
+You will have the skills to diagnose, analyze, and correct failures in software systems.
+
+You can gain practice in efficiently communicating to a technical audience, as well as to a non-technical audience, both in writing and orally.
+
+You will know the fundamentals of computer architectures, programming languages, and operating systems, thereby enabling you to stay abreast of changes in approaches and technology.
+
+You will have facility with fundamental mathematical modeling and algorithmic techniques, and you will understand the limits of what is computable with given resources.
+<br /><br />
+The Computer Science major is comprehensive, from theory to applications to system-building. We teach not just how to program, but how to approach problems computationally, and how to devise appropriate solutions. Undergraduates majoring in Computer Science will have opportunities to participate with faculty in activities outside formal coursework. These activities include assisting in courses, writing a thesis or doing a project under the guidance of a faculty member, and assisting a faculty member in research or in a programming project. Students wishing to devote two or more courses to the study of Computer Science should begin with the two prerequisites, COSC 1 and COSC 10.
+  </p>
+</div>
+
+<div class="container-fluid" id="quotes">
+  <h2>Quotes:<small class="text-muted"> Words of wisdom from students past</small></h2>
+  <blockquote class="blockquote">
+    <p class="mb-0">No matter which CS class I take, the lesson I learn is that I need to start early.</p>
+    <footer class="blockquote-footer">Anon. CS Major <cite title="Source Title">at Dartmouth</cite></footer>
+  </blockquote>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">Algorithms is fun!</p>
+    <footer class="blockquote-footer">Thomas Cormen <cite title="Source Title">Dartmouth College Professor</cite></footer>
+  </blockquote>
+</div>
+
+
+
+<!adapted from https://www.w3schools.com/bootstrap/bootstrap_modal.asp->
+    <div id="bonusTip" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Bonus Tip!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Turns out this is not a bonus tip but a reiteration because it is that important. Don't procrastinate on CS work. Start early.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bonusTip2" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Bonus Tip 2!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Plan out your DPlan ahead of time so that you can space out different CS classes; having to overload on CS courses is not fun!
+                Also talk to Professors and Upperclassmen on which classes would be best to double up on.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-default">
+      <footer class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="#">ORC</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Major</a></li>
+          <li><a href="#">Professors</a></li>
+        </ul>
+      </footer>
+    </nav>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
   </html>
